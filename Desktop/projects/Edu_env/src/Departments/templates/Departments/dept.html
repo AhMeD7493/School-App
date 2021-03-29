@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <p>Department: {{dept.dept_name}}</p>
+  <hr>
+  <p>Courses</p>
+  <hr>
+  {% for dept_course in dept_courses %}
+    <li>{{dept_course.course}}</li> 
+  {% endfor %}
+  <a href="{% url 'exams' %}"> Exams </a>
+{% endblock content %}

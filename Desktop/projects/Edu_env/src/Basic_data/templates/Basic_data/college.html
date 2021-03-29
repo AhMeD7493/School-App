@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %} Colleges: {{college}} {% endblock title %}
+{% block content %}
+    <h2>College: {{ college }}</h2>
+    <h4> Departments </h4>
+    {% for dept in depts %}
+     <li><a href="{% url 'dept' dept.id %}">{{ dept }}</a></li>
+    {% empty %}
+     <li> No departments added here. </li>
+    {% endfor %}
+    <p><a href="{% url 'colleges' %}">Colleges</a></p>
+{% endblock content %}

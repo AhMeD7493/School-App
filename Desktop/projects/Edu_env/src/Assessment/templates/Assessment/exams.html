@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <p>Exam</p>
+  <hr>
+  <ul>
+    {% for exam in exams %}
+      <li>{{ exam }}</li>
+    {% endfor %}
+  </ul>
+{% endblock content %}
